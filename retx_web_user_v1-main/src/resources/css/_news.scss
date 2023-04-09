@@ -1,0 +1,82 @@
+.news-box{
+    background: #EAEAEA;
+    border-radius: 5px;
+    display: flex;
+    align-items: flex-start;
+    // padding: 10px 15px;
+    transition: all .3s;
+    &:hover, &:active{
+        box-shadow: 0px 0px 20px 0px #c4c4c4;
+    }
+
+
+    .news-box__content{
+        // width: 100%;
+        margin-left: 10px;
+        height: 100%;
+        padding: 10px;
+        
+        // display: grid;
+
+        a{
+            font-size: 1.1rem;
+            width:100%;// chiều rộng bằng khối bao nó
+            // white-space: pre-wrap; 
+            overflow: hidden; // ẩn các nội dung khi kích thước lớn hơn chiều rộng khối bên ngoài
+            text-overflow: ellipsis; //thêm 3 dấu chấm ở cuối
+            -webkit-line-clamp: 2;// số dòng muốn hiển thị
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+        }
+        p{
+            font-style: italic;
+            margin: 0;
+            font-size:.9rem;
+            width:100%;// chiều rộng bằng khối bao nó
+            white-space: pre-wrap; 
+            // overflow: hidden; // ẩn các nội dung khi kích thước lớn hơn chiều rộng khối bên ngoài
+            // text-overflow: ellipsis; //thêm 3 dấu chấm ở cuối
+            // -webkit-line-clamp: 3;// số dòng muốn hiển thị
+            // -webkit-box-orient: vertical;
+            // display: -webkit-box;
+        }
+        p.no-line-clamp{
+            -webkit-line-clamp: inherit;
+        }
+    }
+
+    &:hover, &:active {
+        .news-box__content a{
+            color: #e0a511;
+        }
+    }
+
+    .news--image{
+        border-radius: 5px 0 0 5px;
+        overflow: hidden;
+        background-position: center;
+        background-size: cover;
+        img{
+            width: 100%;
+        }
+    }
+    
+}
+
+.news-item{
+    // width: 200px;
+    display: flex;
+    flex-direction: column;
+    h5, h6{
+        margin: 0;
+    }
+    .time{
+        color: #FFA800;
+    }
+    .title{
+        color: #212936;
+    }
+    .description{
+        color: #4D5461
+    }
+}

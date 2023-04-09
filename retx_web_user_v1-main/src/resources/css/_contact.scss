@@ -1,0 +1,116 @@
+.contact-content__content{
+    i{
+        font-size: 2rem;
+    }
+    margin-bottom: 15px;
+    table{
+        max-width: 300px;
+    }
+}
+
+
+.contact-content{
+    padding-top: 30px;
+   
+}
+.contact-message{
+    background-image: url(/img/bg-contact.png);
+    background-position: center;
+    background-size: cover;
+    padding: 30px 0;
+    background-attachment:fixed;
+}
+
+
+.contact-content__box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(/img/bg-contact.png);
+    background-position:center;
+    background-size: cover;
+    padding: 40px 0;
+    border-radius: 5px;
+    border: 2px solid $color-primary-dark;
+}
+
+.contact__title{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.contact__input{
+    width: 100%;
+    background-color: #F4F4F4;
+    border: 1px solid #282828;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all .3s;
+    outline: none;
+
+    &.error{
+        border: 1px solid #F35757;
+    }
+
+    &:hover, &:active, &:focus{
+        border: 1px solid $color-primary-light;
+    }
+}
+
+.contact__input.message{
+    height: 300px;
+}
+
+.contact--map{
+    padding: 30px 0;
+}
+
+.contact--map__content{
+    width: 90%;
+    border: 2px solid #282828;
+    border-radius: 5px;
+}
+
+@media only screen and (min-width: 1200px){
+    .contact-message{
+        padding: 50px 0;
+        form{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+    }
+
+    .contact__title{
+        font-size: 1.7rem;
+    }
+
+    .contact-content__content{
+        width: 70%;
+        margin: 70px 0;
+        table{
+            display: flex;
+            justify-content:space-between;
+            align-items:center;
+            max-width: 100%;
+        }
+    }
+
+    .contact-content__box{
+        padding: 60px 0;
+    }
+
+    .contact--map__content{
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    .product-detal--slider-image{
+        height: auto !important;
+    }
+}

@@ -1,0 +1,36 @@
+pipeline {
+    agent any
+    stages {
+        stage('Dev Environment') {
+            steps {
+                sh '''
+                ssh -i /var/jenkins_home/.ssh/id_rsa.metadap -o StrictHostkeyChecking=no root@66.42.59.39 "cd Projects/retx_web_user_v1; \
+                echo 'ENDPOINT=https://dev.gateway.metadap.io\nENDPOINT_RETX_API=https://dev.api.retx.finance\nPRC_URL_DEFAULT=https://data-seed-prebsc-2-s3.binance.org:8545\nCHAIN_ID_HEX_DEFAULT=0x61' > .env; \
+                git checkout main; \
+                git pull; \
+                docker-compose down; \
+                docker-compose up -d --build"
+                '''
+            }
+        }
+        stage('Prod environment') {
+            options {
+                timeout(time: 1, unit: 'HOURS') 
+            }
+            input{
+                message "Shall we deploy to Production?"
+                ok "Yes Please"
+            }
+            steps {
+                sh '''
+                ssh -i /var/jenkins_home/.ssh/id_rsa.metadap -o StrictHostkeyChecking=no root@45.76.162.9 "cd Projects/retx_web_user_v1; \
+                echo 'ENDPOINT=https://gateway.metadap.io\nENDPOINT_RETX_API=https://api.retx.finance\nPRC_URL_DEFAULT=https://data-seed-prebsc-2-s3.binance.org:8545\nCHAIN_ID_HEX_DEFAULT=0x61' > .env; \
+                git checkout main; \
+                git pull; \
+                docker-compose down; \
+                docker-compose up -d --build"
+                '''
+            }
+        }
+    }
+}

@@ -1,0 +1,428 @@
+// Phần desktop 
+.section{
+    .content{
+        .box{     
+          background: #FFFFFF;
+          border: 1px solid #ACACAC;
+          box-sizing: border-box;
+          height: 100%;
+          border-radius: 5px;
+          .wrapper_box{
+            width: 100%;
+
+            .image_item{
+              
+              box-sizing: border-box;
+              border-radius: 2px;
+              overflow: hidden;
+              
+              height: 180px;
+              img{
+                width: 100%;
+              }
+            }
+            .sold{
+              position: relative;
+              p{
+                text-align: right;
+                font-size: 10px;
+                line-height: 11px;
+                color: #8B8B8B;
+              }
+
+              .progress {
+                height: 0.5rem;
+                background: #FFFFFF;
+                border: 1px solid #808080;
+                border-radius: 0;
+
+                .progress-bar {
+                  background-color: #ff8800;
+                  border-right: 1px solid #808080;
+                }
+              }
+            }
+            .box_title{
+                text-transform: uppercase;
+                font-size: 15px;
+                line-height: 17px;
+                display: flex;
+                align-items: center;
+                color: #494949;
+            }
+            .info{
+              background: #EBEBEB;
+              border-top: 1px solid #ACACAC;
+              border-bottom: 1px solid #ACACAC;
+              box-sizing: border-box;
+              border-radius: 0px;
+              font-size: 12px;
+              line-height: 14px;
+              color: #5E5E5E;
+            }
+            .price{
+              font-size: 18px;
+              line-height: 23px;
+              /* identical to box height */
+              text-transform: uppercase;
+              display: flex;
+              align-items: center;
+              color: #DA9C00;
+            }
+          }
+        }
+    } 
+    
+  }
+.content1{
+    background:  #838383;;
+    .content_about{
+        width: 100%;
+        font-family: 'Roboto', sans-serif;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 5px;
+        font-size: 17px;
+        line-height: 20px;
+        text-align: justify;
+        font-weight: 300;
+        .text_indent{
+            text-indent: 25px;
+        }
+    }
+}
+.back{
+    background: #FCFCFC;
+    border: 0.3px solid #898989;
+    box-sizing: border-box;
+    border-radius: 3px;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    
+}
+.menu_filter{
+  background: #F7F7F7;
+  border: 1px solid #ACACAC;
+  box-sizing: border-box;
+  border-radius: 5px;
+    .menu_border{
+        &:last-child{
+            border-right: 0px;
+        }
+        
+        border-right:1px solid #ACACAC;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+.btn:focus{
+  box-shadow: none !important;
+}
+.dropdown-menu{
+background-color: #F7F7F7 !important; 
+ border-radius: 0; 
+ border: 0.3px solid #ACACAC !important ;
+ width: 100%;
+ left: -1.1rem !important;
+
+ .search_dropdown{
+  p{
+    font-size: 13px;
+    line-height: 15px;
+    color: #959595;
+    text-align: right;
+  }
+  .search_item{
+    background: #F7F7F7;
+    width: 100%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 0.3px solid #00000026;
+    outline: none !important;
+  }
+  img{
+    position: absolute;
+    right: 0;
+  }
+ }
+  
+ 
+}
+
+.price_rage{
+  background: #ebebeb4d;
+  border: 1px solid #d1d1d1;
+  box-sizing: border-box;
+  border-radius: 5px;
+  .text_price{
+    display: flex;
+  }
+}
+.wrapper_add_location{
+
+}
+.type_of_asset{
+  // border: 1px solid #ACACAC;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  .title_type{
+    // background: #FEC128;
+    // box-sizing: border-box;
+    // padding-top: 10px !important;
+    // padding-bottom: 10px !important;
+    border-bottom: none;
+    // font-weight: bold;
+    // color: #454545; 
+    font-size: 14px !important;
+    line-height: 20px;
+    text-transform: capitalize;
+  }
+}
+.wrapper_item_type_of_asset{
+  border: 1px solid #ACACAC;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: #F7F7F7;
+}
+.item_type_of_asset{
+  // border: 1px solid #d1d1d1;
+  // box-sizing: border-box;
+  border-top: 0;
+  border-bottom: 0;
+  // background-color: #ebebeb4d;
+
+  
+  &:last-child{
+  // border-bottom: 1px solid #d1d1d1;
+  border-radius: 0 0 10px 10px;
+  }
+  .title_item_type{
+    font-style: italic;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 17px;
+    color: #888888;
+  }
+  .input-group{
+    background: rgba(255, 255, 255, 0.9) !important;
+    // border: 0.5px solid #535353 !important;
+    box-sizing: border-box !important;
+    border-radius: 5px !important;
+
+    .form-select{
+      font-weight: normal;
+      font-size: 17px;
+      line-height: 20px;
+      color: #454545;
+    }
+    
+  }
+}
+
+// Profile
+.profile_page{
+  
+  
+  background-image: url(/public/img/bg-auth.png);
+  border: 1px solid #ACACAC;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.wrapper_profile{
+  .profile_img{
+      img{
+        width: 200px;
+        height: 200px;
+      }
+   }
+   .profile_name{
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    color: #494949;
+   }
+   
+}
+// .profile_info{
+//   background: #FFFFFF;
+//   border: 0.5px solid #454545;
+//   box-sizing: border-box;
+//   border-radius: 5px;
+//   .profile_item{
+//     font-size: 15px ;
+//     line-height: 17px ;
+//     display: flex ;
+//     align-items: center ;
+//     text-align: center ;
+//     color: #494949;
+//   }
+//  }
+ .copy{
+   margin-left: 15px;
+   right: 0;
+   bottom: 5px;
+  .copy_item{
+    background: #FFDA7D;
+    border-radius: 5px;
+    
+    p{
+      font-size: 10px;
+line-height: 11px;
+display: flex;
+align-items: center;
+
+color: #4D4D4D;
+    }
+  }
+ }
+
+.logo_profile{
+  img{
+    width: 100%;
+  }
+  p{
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    color: #494949;
+  }
+}
+.wrapper_info_item{
+  .info_profile_item{
+    background: #FFFFFF;
+    border: 0.5px solid #ACACAC;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+}
+
+// Phần Mobile
+@media only screen and (max-width:576px) 
+{
+
+  .box_title{
+    font-size: 13px !important;
+  }
+  .sold{
+      text-align: right !important;
+  }
+  .quanlity{
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width:1200px) {
+  .menu_border{
+      font-size: 12px !important;
+  }
+  .caget{
+      width: 10px;
+      height: 10px;
+  }
+  #dropdownMenuLink{
+    // font-size: 12px !important;
+  }
+  .dropdown-menu{
+    font-size: 12px !important;
+  }
+}
+@media only screen and (max-width:1200px) {
+  .profile_page{
+    background-image: url(/public/img/bg_profile_mobile.png);
+    background-size: cover;
+    background-position: center;
+    background-size: 100%;
+  }
+  
+   .rrr{
+     width: 250px;
+   }
+   
+}
+.profile_saler{
+  
+  .name_profile{
+    font-size: 15px;
+    text-align: center;
+    display: block;
+  }
+}
+@media only screen and (max-width:429px) {
+  .profile_saler{
+    flex-direction: column;
+    .name_profile{
+      font-size: 15px;
+      text-align: center;
+      display: block;
+    }
+  }
+
+}
+@media only screen and (min-width:429px) and (max-width:1200px) {
+  .profile_saler{
+    .avt_profile{
+      width: 120px;
+    }
+    .name_profile{
+      font-size: 15px;
+      text-align: center;
+      display: block;
+    }
+  }
+  .wrapper_info_item{
+    .info_profile_item{
+      background: none;
+      border: none;
+      box-sizing: border-box;
+      border-radius: 0px;
+    }
+  }
+  .rrr{
+    width: 150px;
+    
+  }
+}
+@media only screen and (min-width:321px) and (max-width:428px) {
+  .profile_saler{
+   
+    .name_profile{
+      text-align: center;
+      text-align: center;
+      display: block;
+    }
+  }
+  .wrapper_info_item{
+    .info_profile_item{
+      background: none;
+      border: none;
+      box-sizing: border-box;
+      border-radius: 0px;
+    }
+  }
+  
+}
+@media only screen and (max-width:320px){
+  .profile_saler{
+   
+    .name_profile{
+    text-align: center;
+      display: block;
+    }
+  }
+  .wrapper_info_item{
+    .info_profile_item{
+      background: none;
+      border: none;
+      box-sizing: border-box;
+      border-radius: 0px;
+    }
+  }
+}
+

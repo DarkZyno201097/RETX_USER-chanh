@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Binance Smart Chain - Testnet",
+        "url_prc": "https://data-seed-prebsc-1-s3.binance.org:8545",
+        "chain_id_hex": "0x61"
+    },
+    {
+        "name": "Binance Smart Chain",
+        "url_prc": "https://bsc-dataseed.binance.org",
+        "chain_id_hex": "0x38"
+    }
+]

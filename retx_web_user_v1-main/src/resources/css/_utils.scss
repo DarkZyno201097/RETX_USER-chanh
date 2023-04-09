@@ -1,0 +1,218 @@
+.section__title--border-bottom{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+    color: #747474;
+    &::after{
+        content: " ";
+        display: block;
+        position: absolute;
+        top: 120%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 2px;
+        width: 60%;
+        background-color: $color_primary_dark;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    .section__title--border-bottom{
+        &::after{
+            width: 400px;
+        }
+    }
+}
+
+.swiper-prev-custom, .swiper-next-custom{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 99;
+    border: none;
+    background-color: #F2F2F2;
+    width: 40px;
+    height: 40px;
+    font-size: 1.7rem;
+    transition: all 0.3s;
+    color: $color_primary_light;
+    border-radius: 5px;
+    i{
+        transform: scale(1.3);
+    }
+    border: 1px solid #585858;
+
+}
+
+.swiper-prev-custom{
+    left: 10px;
+}
+
+.swiper-next-custom{
+    right: 10px;
+}
+
+.swiper-prev-custom.disable, .swiper-next-custom.disable{
+    opacity: 0;
+}
+
+.section-space{
+    margin-top: 50px;
+}
+
+.a-none{
+    text-decoration: none;
+    color: #111;
+    &:hover, &:active{
+        color: #111;
+    }
+}
+
+.btn-primary-light, .btn-primary-dark{
+    background:  $color-primary-light;
+    // border: 1px solid #626262;
+    border: 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 10px;
+    width: 300px;
+    transition: all .3s;
+    text-transform: capitalize;
+    transition: all .3s;
+    // &:hover, &:active{
+    //     background-color: #ffbb0e;
+    // }
+}
+
+// .btn-primary-light.border-none{
+//     border: 0;
+// }
+
+.btn-primary-light{
+    &:hover, &:active{
+        background: #ffb600;
+    }
+
+    &.btn-submit{
+        padding: 8px 15px;
+        width: auto;
+        font-weight: bold;
+        color: #5a5a5a;
+    }
+}
+
+.btn-primary-dark{
+    color: #fff;
+    background:  $color-primary-dark;
+}
+
+.section-title--w-100{
+    padding-top: 30px;
+    margin-bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    // background-color: $color-primary-dark;
+    height: 40px;
+    .container{
+        display: flex;
+        align-items: center;
+    }
+    .text{
+        color: #332f6a;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .box-1{
+        width: 5px;
+        height: 23px;
+        display: inline-block;
+        background-color: #ff8005;
+    }
+    .box-2{
+        margin-left: 5px;
+        margin-right: 10px;
+        width: 10px;
+        height: 23px;
+        display: inline-block;
+        background-color: #ff8005;
+    }
+}
+
+.button{
+    border: 0;
+    outline: 0;
+    background-color: #0000;
+}
+
+pre{
+    font-family: arial !important;
+}
+
+.auth-page--input-message-error, .input-message-error{
+    color: #F35757;
+    margin-left: 5px;
+    margin-top: 2px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.loader {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.metadap-input{
+    border: 0;
+    outline: 0;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #cacaca;
+    background-color: white;
+}
+
+@media only screen and (max-width: 768px){
+    .text-stop-trading{
+        font-size: 16px;
+        padding: 0 10px;
+    }
+}
+.btn-none{
+    border: 0;
+    background: transparent;
+}
+
+.ant-steps-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.ant-steps-item-finish .ant-steps-item-icon > .ant-steps-icon{
+    color: #FF8800 !important;
+}
+
+.ant-steps-item-finish .ant-steps-item-icon{
+    border-color: #FF8800;
+}
+.ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-icon{
+    background-color: #FF8800;
+    border-color: #FF8800;
+}
+
+.ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title::after{
+    background-color: #FF8800;
+}
